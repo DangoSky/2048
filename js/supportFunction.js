@@ -6,10 +6,10 @@ function showNumberWithAnimation(i, j, number){
 	numberCell.css("color", getNumberColor(number));
 	numberCell.text(number);
 	numberCell.animate({
-		width: "100px";
-		height: "100px";
-		top: getTop(i);
-		left: getLeft(j);
+		width: "100px",
+		height: "100px",
+		top: getTop(i),
+		left: getLeft(j),
 	},50);
 }
 
