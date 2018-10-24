@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+	padding: 0;
+	list-style: none;
+	border: none;
+}
+.container{
+	width: 456px;
+	height: 456px;
+	margin: 0 auto;
+	border-radius: 15px;
+	background-color: #bbada0;
+	position: relative;
+	padding: 10px;
+}
+.grid_cell{
+	width: 100px;
+	height: 100px;
+	background-color: #ccc0b3;
+	border-radius: 10px;
+	margin: 7px;
+	float: left;
+//	position: absolute;
+}
+.number_cell{
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	border-radius: 10px;
+	line-height: 100px;
+	font-weight: bold;
+	font-family: KaiTi, SimSun;
+	font-size: 50px;
+	position: absolute;
+}
