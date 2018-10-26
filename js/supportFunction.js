@@ -139,7 +139,7 @@ function moveLeft(){
 						}
 						else{                   //到达位置的方格已经被合并过，退而占据右边的方格
 							showMoveWithAnimation(i, i, j, t+1);
-							val[i][t+1]= val[i][t];
+							val[i][t+1]= val[i][j];
 							val[i][j]= 0;
 						}
 						break;
@@ -171,7 +171,6 @@ function moveRight(){
 							showMoveWithAnimation(i, i, j, t);
 							val[i][t]+= val[i][j];
 							score+= val[i][t];
-							val[i][t+1]= val[i][t];
 						    val[i][j]= 0;
 							add[i][t]= 1;
 						}
@@ -209,14 +208,12 @@ function moveUp(){
 							showMoveWithAnimation(i, t, j, j);
 							val[t][j]+= val[i][j];
 							score+= val[t][j];
-							val[i][t+1]= val[i][t];
 						    val[i][j]= 0;
 							add[t][j]= 1;
 						}
 						else{                   
 							showMoveWithAnimation(i, i, j, t+1);
 							val[t+1][j]= val[i][j];
-							val[i][t+1]= val[i][t];
 							val[i][j]= 0;
 						}
 						break;
