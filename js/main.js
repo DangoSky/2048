@@ -95,6 +95,6 @@ $(document).keydown(function(event){
 //实时改变分数
 function changeScore(){
 
-	$("#score").innerHTML= score;
+	$("#score").html(score);
 
 }
