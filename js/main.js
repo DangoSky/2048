@@ -18,6 +18,11 @@ function init(){
 			$("#grid_cell_" + i + "_" + j).css("left", getLeft(j));
 		}
 	}
+	var over= $("#over");     //隐藏游戏结束面板
+	over.css("width", "0");
+	over.css("height", "0");
+	over.css("opacity", "0");
+	$(".number_cell, .grid_cell").css("opacity", "1");
 	generateNumberCell();   //布局numberCell格子
 	generateNumber();       //随机选择一个位置并获取随机数
 	generateNumber(); 
@@ -89,12 +94,9 @@ $(document).keydown(function(event){
 	}
 	changeScore();
     setTimeout("isGameOver()",400);	
-	
 })
 
 //实时改变分数
 function changeScore(){
-
-	$("#score").innerHTML= score;
-
+	$("#score").html(score);
 }

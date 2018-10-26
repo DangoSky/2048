@@ -106,13 +106,11 @@ function isGameOver(){
 
 //游戏结束
 function gameOver(){
-	var over= $("#over");
+	var over= $("#over");     
+	over.css("width", "475px");
+	over.css("height", "475px");
+	over.css("opacity", "1");
 	$(".number_cell, .grid_cell").css("opacity", "0.5");
-	over.animate({
-		width: "475px",
-		height: "475px",
-		opacity: "1",
-	})
 }
 
 //向左移动
@@ -123,13 +121,13 @@ function moveLeft(){
 		for(var j=1; j<4; j++){
 			if(val[i][j] != 0 ){
 				for(var t=0; t<j; t++){
-					if(val[i][t] == 0 && noBlockHorizontal(i, j, t)){     //到达位置为空而且中间没有障碍物
+					if(val[i][t] == 0 && noBlockHorizontal(i, t, j)){     //到达位置为空而且中间没有障碍物
 						showMoveWithAnimation(i, i, j, t);                //第i行到第i行，第j列到第t列
 					    val[i][t]= val[i][j];
 						val[i][j]= 0;
 						break;
 					}
-					else if(val[i][t] == val[i][j] && noBlockHorizontal(i, j, t)){  
+					else if(val[i][t] == val[i][j] && noBlockHorizontal(i, t, j)){  
 						if(add[i][t] == 0){                               //可以和到达位置的方格合并
 							showMoveWithAnimation(i, i, j, t);
 							val[i][t]+= val[i][j];
@@ -197,13 +195,13 @@ function moveUp(){
 		for(var i=1; i<4; i++){
 			if(val[i][j] != 0 ){
 				for(var t=0; t<i; t++){
-					if(val[t][j] == 0 && noBlockVertical(j, i, t)){     
+					if(val[t][j] == 0 && noBlockVertical(j, t, i)){     
 						showMoveWithAnimation(i, t, j, j);               
 					    val[t][j]= val[i][j];
 						val[i][j]= 0;
 						break;
 					}
-					else if(val[t][j] == val[i][j] && noBlockVertical(j, i, t)){  
+					else if(val[t][j] == val[i][j] && noBlockVertical(j, t, i)){  
 						if(add[t][j] == 0){                              
 							showMoveWithAnimation(i, t, j, j);
 							val[t][j]+= val[i][j];
