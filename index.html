@@ -7,29 +7,43 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/supportFunction.js"></script>
+	<script type="text/javascript" src="js/underscore.js"></script>
 </head> 
 <body>
-    <header>
-	    <button>New Game</button>
-        <p>Score:<span id="score"></span></p>
-	</header>
-    <div class= "container">
-	    <div class="grid_cell" id="cell_0_0"></div>
-	    <div class="grid_cell" id="cell_0_1"></div>
-	    <div class="grid_cell" id="cell_0_2"></div>
-	    <div class="grid_cell" id="cell_0_3"></div>
-	    <div class="grid_cell" id="cell_1_0"></div>
-	    <div class="grid_cell" id="cell_1_1"></div>
-	    <div class="grid_cell" id="cell_1_2"></div>
-	    <div class="grid_cell" id="cell_1_3"></div>
-	    <div class="grid_cell" id="cell_2_0"></div>
-	    <div class="grid_cell" id="cell_2_1"></div>
-	    <div class="grid_cell" id="cell_2_2"></div>
-	    <div class="grid_cell" id="cell_2_3"></div>
-	    <div class="grid_cell" id="cell_3_0"></div>
-	    <div class="grid_cell" id="cell_3_1"></div>
-	    <div class="grid_cell" id="cell_3_2"></div>
-	    <div class="grid_cell" id="cell_3_3"></div>
+    <div class="header">
+	    <div class="headline">2048</div>
+	    <div class="score">
+		    <p>SCORE:</p>
+			<span id="score">2048</span>
+		</div>
+		<div class="new_game">New Game</div>
+        <div class="description">
+		    <p>Please use ←↑→↓ to control this game.</p></p></p>
+		</div>
 	</div>
+    <div class= "container">
+	    <div class="grid_cell" id="grid_cell_0_0"></div>
+	    <div class="grid_cell" id="grid_cell_0_1"></div>
+	    <div class="grid_cell" id="grid_cell_0_2"></div>
+	    <div class="grid_cell" id="grid_cell_0_3"></div>
+	    <div class="grid_cell" id="grid_cell_1_0"></div>
+	    <div class="grid_cell" id="grid_cell_1_1"></div>
+	    <div class="grid_cell" id="grid_cell_1_2"></div>
+	    <div class="grid_cell" id="grid_cell_1_3"></div>
+	    <div class="grid_cell" id="grid_cell_2_0"></div>
+	    <div class="grid_cell" id="grid_cell_2_1"></div>
+	    <div class="grid_cell" id="grid_cell_2_2"></div>
+	    <div class="grid_cell" id="grid_cell_2_3"></div>
+	    <div class="grid_cell" id="grid_cell_3_0"></div>
+	    <div class="grid_cell" id="grid_cell_3_1"></div>
+	    <div class="grid_cell" id="grid_cell_3_2"></div>
+	    <div class="grid_cell" id="grid_cell_3_3"></div>
+		<div id= "over" class="over">
+	        <p>Sorry</p>
+	        <p>Game Over:(</p>
+		    <p>Play Again?</p>
+	    </div>
+	</div>
+	
 </body>
 </html>

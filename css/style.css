@@ -4,23 +4,65 @@
 	list-style: none;
 	border: none;
 }
+/*
+.headline, .score, .new_game{
+	width: 100px;
+	height: 120px;
+	background-color: #ccc;
+	position: absolute;	
+	font-size: 30px;
+	text-align: center;
+	line-height: 120px;
+}*/
+.headline{
+	font-size: 60px;
+	font-weight: bold;
+	color: rgb(119, 110, 101);
+	position: absolute;
+	left: 530px;
+	top: 22px;
+}
+.score{
+	background-color: rgb(187, 173, 160);
+	position: absolute;
+	left: 900px;
+	top: 22px;
+	width: 100px;
+	height: 60px;
+}
+.score.children[1]{
+	font-size: 20px;
+}
+.new_game{
+	
+}
+.description{
+	font-size: 18px;
+	color: rgb(119, 110, 101);
+	position: absolute;
+	left: 530px;
+	top: 105px;
+}
 .container{
-	width: 456px;
-	height: 456px;
-	margin: 0 auto;
+	width: 475px;
+	height: 475px;
+	margin: 120px auto;
 	border-radius: 15px;
 	background-color: #bbada0;
 	position: relative;
-	padding: 10px;
+	box-sizing: border-box; 
+	padding: 15px;
 }
 .grid_cell{
 	width: 100px;
 	height: 100px;
 	background-color: #ccc0b3;
+	text-align: center;
+	line-height: 100px;
+	font-size: 50px;
 	border-radius: 10px;
-	margin: 7px;
 	float: left;
-//	position: absolute;
+	position: absolute;	
 }
 .number_cell{
 	width: 100px;
@@ -32,4 +74,17 @@
 	font-family: KaiTi, SimSun;
 	font-size: 50px;
 	position: absolute;
+}
+.over{
+	width: 475px;
+	height: 475px;
+	text-align: center;
+	font-size: 50px;
+	font-family: KaiTi, SimSun;
+	color: #776e65;
+	font-weight: bold;
+	position: absolute;
+	top: 30%;
+	opacity: 0;
+	z-index: 99;
 }

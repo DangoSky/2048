@@ -1,31 +1,49 @@
-
-
-
-
-var val= new Array();
-
-
-
+var val = new Array();
+var add = new Array();
+var score = 0;
 $(document).ready(function(e){
-	
-	
 	init();              //初始化每一个格子
 	generateNumber();    //随机选择一个位置并获取随机数
 	generateNumber(); 
-
 });
-
-
 
 function init(){
 	for(var i=0; i<4; i++){
 		val[i]= new Array();
+		add[i]= new Array();
 		for(var j=0; j<4; j++){
 			val[i][j]= 0;
+			add[i][j]= 0;
+			$("#grid_cell_" + i + "_" + j).css("top", getTop(i));
+			$("#grid_cell_" + i + "_" + j).css("left", getLeft(j));
+		}
+	}
+
+	generateNumberCell();
+}
+
+function generateNumberCell(){
+	$(".number_cell").remove();
+	for(var i=0; i<4; i++){
+		for(var j=0; j<4; j++){
+		    $(".container").append('<div class="number_cell" id="number_cell_'+i+'_'+j+'"></div>');						
+			var numberCell= $("#number_cell_" + i + "_" + j);	
+			if(val[i][j] == 0) {
+				numberCell.css("width", "0px");
+				numberCell.css("height", "0px");
+			}
+			else{
+				numberCell.css("width", "100px");
+				numberCell.css("height", "100px");
+				numberCell.css("background-color", getNumberCellColor(val[i][j]));
+	            numberCell.css("color", getNumberColor(val[i][j]));
+	            numberCell.text(val[i][j]);
+			}  
+			numberCell.css("top", getTop(i));
+			numberCell.css("left", getLeft(j));
 		}
 	}
 }
-
 
 function generateNumber(){
 	if(noSpace())  return false;   //判断是否还有空格子
@@ -44,23 +62,30 @@ function generateNumber(){
 	return true;
 }
 
-
-
-//数字颜色
-function getNumberColor(number){
-	if(number < 4)  return "#77e65";
-	else  return "white";
-}
-
-
-//判断是否还有空格子
-function noSpace(){
-	for(var i=0 ;i<4; i++){
-		for(var j=0; j<4; j++){
-			if(val[i][j]== 0)  return false;
-		}
+//监听键盘
+$(document).keydown(function(event){
+	switch(event.keyCode){
+		case 37:    
+		    if(moveLeft()){
+				generateNumber();
+			}  
+			break;
+		case 39:
+		    if(moveRight()){
+				generateNumber();
+			}
+			break;
+		case 38:
+		    if(moveUp()){
+				generateNumber();
+			}
+			break;
+		case 40:
+		    if(moveDown()){
+				generateNumber();
+			}
+			break;
 	}
-	return true;
-}
-
-
+	generateNumber();
+    setTimeout("isGameOver()",400);
+})
