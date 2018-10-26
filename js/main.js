@@ -2,13 +2,12 @@ var val = new Array();
 var add = new Array();
 var score = 0;
 $(document).ready(function(e){
-	init();              //初始化每一个格子
-	generateNumber();    //随机选择一个位置并获取随机数
-	generateNumber(); 
-	changeScore();
+	init();             
 });
 
 function init(){
+	score= 0;
+	changeScore();
 	for(var i=0; i<4; i++){
 		val[i]= new Array();
 		add[i]= new Array();
@@ -19,8 +18,9 @@ function init(){
 			$("#grid_cell_" + i + "_" + j).css("left", getLeft(j));
 		}
 	}
-
-	generateNumberCell();
+	generateNumberCell();   //布局numberCell格子
+	generateNumber();       //随机选择一个位置并获取随机数
+	generateNumber(); 
 }
 
 function generateNumberCell(){
@@ -85,15 +85,16 @@ $(document).keydown(function(event){
 		    if(moveDown()){
 				generateNumber();
 			}
-			break;
+			break;		
 	}
 	changeScore();
-	generateNumber();
     setTimeout("isGameOver()",400);	
+	
 })
 
 //实时改变分数
 function changeScore(){
+
 	$("#score").innerHTML= score;
-	
+
 }

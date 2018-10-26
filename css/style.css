@@ -7,19 +7,31 @@
 body{
 	overflow: hidden;
 }
+a:link{
+	text-decoration: none;
+}
 .headline{
 	font-size: 60px;
 	font-weight: bold;
 	color: rgb(119, 110, 101);
 	position: absolute;
-	left: 640px;
-	top: 7px;
+	top: -143px;
+	left: 125px;
+}
+.description{
+	font-size: 18px;
+	color: rgb(119, 110, 101);
+	position: absolute;
+	top: -60px;
+}
+.description p:nth-child(2){
+	float: right;
 }
 .score{
 	background-color: rgb(187, 173, 160);
 	position: absolute;
-	left: 900px;
-	top: 27px;
+	left: 375px;
+	top: -125px;
 	width: 100px;
 	height: 54px;
 	text-align: center;
@@ -30,18 +42,17 @@ body{
 }
 .score p{
 	font-size: 12px;
-
 }
 .score span{
 	font-size: 25px;
 }
 .new_game{
 	background-color: #8f7a66;
-	width: 120px;
+	width: 115px;
 	height: 40px;
 	position: absolute;
-	top: 90px;
-	left: 880px;
+	top: -60px;
+	left: 360px;
 	line-height: 40px;
 	font-size: 20px;
 	color: white;
@@ -49,15 +60,8 @@ body{
 	cursor: pointer;
 	border-radius: 5px;
 }
-.description{
-	font-size: 18px;
-	color: rgb(119, 110, 101);
-	position: absolute;
-	left: 530px;
-	top: 90px;
-}
-.description p:nth-child(2){
-	float: right;
+.new_game a{
+	color: white;
 }
 .container{
 	width: 475px;

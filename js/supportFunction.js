@@ -149,6 +149,7 @@ function moveLeft(){
 		}
 	}
 	setTimeout("generateNumberCell()", 200);
+	return true;
 }
 
 //向右移动
@@ -186,6 +187,7 @@ function moveRight(){
 		}
 	}
 	setTimeout("generateNumberCell()", 200);
+	return true;
 }
 
 //向上移动
@@ -224,6 +226,7 @@ function moveUp(){
 		}
 	}
 	setTimeout("generateNumberCell()", 200);
+	return true;
 }
 
 //向下移动
@@ -260,6 +263,7 @@ function moveDown(){
 		}
 	}
 	setTimeout("generateNumberCell()", 200);
+	return true;
 }
 
 //恢复判断是否要合并的add数组为初始状态
@@ -280,6 +284,7 @@ function canMoveLeft(){
 			}
 		}
 	}
+	return false;
 }
 
 //判断格子是否可以向右移动
@@ -291,6 +296,7 @@ function canMoveRight(){
 			}
 		}
 	}
+	return false;
 }
 
 //判断格子是否可以向上移动
@@ -302,6 +308,7 @@ function canMoveUp(){
 			}
 		}
 	}
+	return false;
 }
 
 //判断格子是否可以向下移动
@@ -313,6 +320,7 @@ function canMoveDown(){
 			}
 		}
 	}
+	return false;
 }
 
 //判断水平方向上两个格子之间有没有障碍物
