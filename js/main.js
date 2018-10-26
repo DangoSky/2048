@@ -5,6 +5,7 @@ $(document).ready(function(e){
 	init();              //初始化每一个格子
 	generateNumber();    //随机选择一个位置并获取随机数
 	generateNumber(); 
+	changeScore();
 });
 
 function init(){
@@ -86,6 +87,13 @@ $(document).keydown(function(event){
 			}
 			break;
 	}
+	changeScore();
 	generateNumber();
-    setTimeout("isGameOver()",400);
+    setTimeout("isGameOver()",400);	
 })
+
+//实时改变分数
+function changeScore(){
+	$("#score").innerHTML= score;
+	
+}

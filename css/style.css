@@ -4,49 +4,65 @@
 	list-style: none;
 	border: none;
 }
-/*
-.headline, .score, .new_game{
-	width: 100px;
-	height: 120px;
-	background-color: #ccc;
-	position: absolute;	
-	font-size: 30px;
-	text-align: center;
-	line-height: 120px;
-}*/
+body{
+	overflow: hidden;
+}
 .headline{
 	font-size: 60px;
 	font-weight: bold;
 	color: rgb(119, 110, 101);
 	position: absolute;
-	left: 530px;
-	top: 22px;
+	left: 640px;
+	top: 7px;
 }
 .score{
 	background-color: rgb(187, 173, 160);
 	position: absolute;
 	left: 900px;
-	top: 22px;
+	top: 27px;
 	width: 100px;
-	height: 60px;
+	height: 54px;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 5px;
+	color: white;
+	border-radius: 5px;
 }
-.score.children[1]{
-	font-size: 20px;
+.score p{
+	font-size: 12px;
+
+}
+.score span{
+	font-size: 25px;
 }
 .new_game{
-	
+	background-color: #8f7a66;
+	width: 120px;
+	height: 40px;
+	position: absolute;
+	top: 90px;
+	left: 880px;
+	line-height: 40px;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 5px;
 }
 .description{
 	font-size: 18px;
 	color: rgb(119, 110, 101);
 	position: absolute;
 	left: 530px;
-	top: 105px;
+	top: 90px;
+}
+.description p:nth-child(2){
+	float: right;
 }
 .container{
 	width: 475px;
 	height: 475px;
-	margin: 120px auto;
+	margin: 150px auto;
 	border-radius: 15px;
 	background-color: #bbada0;
 	position: relative;
