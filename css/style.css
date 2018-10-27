@@ -46,8 +46,13 @@ a:link{
 	left: 260px;
 	top: -125px;
 }
+<<<<<<< HEAD
 .score p, .bestScore p{
 	font-size: 12px;
+=======
+.score span{
+	font-size: 25px;
+>>>>>>> 158cadc10b16dec05b81a9ea402492d50e73f266
 }
 .score span, .bestScore span{
 	font-size: 30px;
