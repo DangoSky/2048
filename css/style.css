@@ -16,7 +16,7 @@ a:link{
 	color: rgb(119, 110, 101);
 	position: absolute;
 	top: -143px;
-	left: 125px;
+	left: 25px;
 }
 .description{
 	font-size: 18px;
@@ -27,31 +27,37 @@ a:link{
 .description p:nth-child(2){
 	float: right;
 }
-.score{
+.score, .bestScore{
 	background-color: rgb(187, 173, 160);
 	position: absolute;
-	left: 375px;
-	top: -125px;
 	width: 100px;
-	height: 54px;
+	height: 60px;
 	text-align: center;
 	box-sizing: border-box;
 	padding: 5px;
 	color: white;
 	border-radius: 5px;
 }
-.score p{
+.score{
+	left: 375px;
+	top: -125px;
+}
+.bestScore{
+	left: 260px;
+	top: -125px;
+}
+.score p, .bestScore p{
 	font-size: 12px;
 }
-.score span{
-	font-size: 12px;
+.score span, .bestScore span{
+	font-size: 30px;
 }
 .new_game{
 	background-color: #8f7a66;
 	width: 115px;
 	height: 40px;
 	position: absolute;
-	top: -60px;
+	top: -50px;
 	left: 360px;
 	line-height: 40px;
 	font-size: 20px;

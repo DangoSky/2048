@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/supportFunction.js"></script>
 	<script type="text/javascript" src="js/underscore.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 </head> 
 <body>
     <div class= "container">   
@@ -16,6 +17,10 @@
 	    <div class="score">
 		    <p>SCORE:</p>
 			<span id="score"></span>
+		</div>
+		<div class="bestScore" title="Please believe this is not your limit.">
+		    <p>BEST:</p>
+			<span id="bestScore"></span>
 		</div>
 		<div class="new_game">
 		    <a href="javascript:init();">New Game</a>
@@ -46,6 +51,5 @@
 		    <p>Play Again?</p>
 	    </div>
 	</div>
-	
 </body>
 </html>

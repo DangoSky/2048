@@ -1,6 +1,7 @@
 var val = new Array();
 var add = new Array();
 var score = 0;
+
 $(document).ready(function(e){
 	init();             
 });
@@ -8,6 +9,7 @@ $(document).ready(function(e){
 function init(){
 	score= 0;
 	changeScore();
+	changeBestScore();
 	for(var i=0; i<4; i++){
 		val[i]= new Array();
 		add[i]= new Array();
@@ -99,4 +101,13 @@ $(document).keydown(function(event){
 //实时改变分数
 function changeScore(){
 	$("#score").html(score);
+	changeBestScore();
+}
+
+//实时改变最高分数
+function changeBestScore(){
+	if(Cookies.get('score') === undefined || score > Cookies.get('score')){
+		Cookies.set('score', score, {expires: 30});
+	}
+	 $('#bestScore').html(Cookies.get('score'));
 }
