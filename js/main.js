@@ -3,6 +3,7 @@ var add = new Array();
 var score = 0;
 $(document).ready(function(e){
 	init();             
+	loadBestScore();
 });
 
 function init(){
@@ -99,4 +100,19 @@ $(document).keydown(function(event){
 //实时改变分数
 function changeScore(){
 	$("#score").html(score);
+	saveBestScore();
+}
+
+// 保存最高分数到Cookie
+function saveBestScore() {
+	if (Cookies.get('score') === undefined || score > Cookies.get('score')) {
+		Cookies.set('score', score, { expires: 30 });  //设定分数储存在30天后过期
+	}
+}
+
+// 从Cookie中读取最高分数，并且弹出一个（很烦人）的提示
+function loadBestScore() {
+	if (Cookies.get('score') !== undefined && Cookies.get('score') !== 0) {
+		alert('您的最高分数为：' + Cookies.get('score'));
+	}
 }
