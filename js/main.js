@@ -100,6 +100,7 @@ $(document).keydown(function(event){
 
 //实时改变分数
 function changeScore(){
+	//document.getElementById("score").innerText= score;
 	$("#score").html(score);
 	changeBestScore();
 }
