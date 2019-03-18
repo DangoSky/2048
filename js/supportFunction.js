@@ -9,7 +9,7 @@ function showNumberWithAnimation(i, j, number){
 		height: "21.25%",
 		top: getTop(i),
 		left: getLeft(j),
-	},100);
+	}, 100);
 }
 
 //数字方格移动动画
@@ -18,7 +18,7 @@ function showMoveWithAnimation(fromRow, toRow, fromCol, toCol){
 	numberCell.animate({
 		left: getLeft(toCol),
 		top: getTop(toRow),
-	},100);
+	}, 100);
 }
 
 //数字方格的背景颜色
@@ -106,13 +106,18 @@ function isGameOver(){
 
 //游戏结束
 function gameOver(){
+	$("#body").css("opacity", "0.5");
 	var over= $("#over");     
-	// over.css("opacity", "1");
 	over.css("display", "block");	
 	over.animate({
 		"opacity": "1"
 	}, 500);
-	$(".number_cell, .grid_cell").css("opacity", "0.5");
+	// 需要移除将之前的监听事件，否则重新开始游戏后会造成监听事件的重叠多次触发
+	var content = document.getElementById('content');
+	content.removeEventListener('touchstart', touchStart);
+	content.removeEventListener('touchmove', touchMove, {passive: false});
+	content.removeEventListener('touchend', touchEnd);
+	document.removeEventListener('keydown',pressKeyBoard);
 }
 
 //向左移动
@@ -148,7 +153,6 @@ function moveLeft(){
 			}
 		}
 	}
-	setTimeout("generateNumberCell()", 200);
 	return true;
 }
 
@@ -185,7 +189,6 @@ function moveRight(){
 			}
 		}
 	}
-	setTimeout("generateNumberCell()", 200);
 	return true;
 }
 
@@ -222,7 +225,6 @@ function moveUp(){
 			}
 		}
 	}
-	setTimeout("generateNumberCell()", 200);
 	return true;
 }
 
@@ -259,7 +261,6 @@ function moveDown(){
 			}
 		}
 	}
-	setTimeout("generateNumberCell()", 200);
 	return true;
 }
 
