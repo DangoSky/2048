@@ -1,12 +1,12 @@
 //逐渐显示随机数字
 function showNumberWithAnimation(i, j, number){
-    var numberCell= $("#number_cell_" + i + "_" + j);	
+	var numberCell= $("#number_cell_" + i + "_" + j);	
 	numberCell.css("background-color", getNumberCellColor(number));
 	numberCell.css("color", getNumberColor(number));
 	numberCell.text(number);
 	numberCell.animate({
-		width: "100px",
-		height: "100px",
+		width: "21.25%",
+		height: "21.25%",
 		top: getTop(i),
 		left: getLeft(j),
 	},100);
@@ -75,12 +75,12 @@ function getNumberColor(number){
 
 //numberCell离顶部的距离
 function getTop(i){
-	return  15 + 115 * i;
+	return  `${3 + 24.25 * i}%`;
 }
 
 //numberCell离左边的距离
 function getLeft(j){
-	return  15 + 115 * j;
+	return  `${3 + 24.25 * j}%`;
 }
 
 //判断是否还有空格子
@@ -107,9 +107,11 @@ function isGameOver(){
 //游戏结束
 function gameOver(){
 	var over= $("#over");     
-	over.css("width", "475px");
-	over.css("height", "475px");
-	over.css("opacity", "1");
+	// over.css("opacity", "1");
+	over.css("display", "block");	
+	over.animate({
+		"opacity": "1"
+	}, 500);
 	$(".number_cell, .grid_cell").css("opacity", "0.5");
 }
 

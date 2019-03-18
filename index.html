@@ -13,43 +13,46 @@
 </head> 
 <body>
     <div class= "container">   
-	    <div class="headline">2048</div>
-	    <div class="score">
-		    <p>SCORE:</p>
-			<span id="score"></span>
+		<div class="header">
+			<p class="headline">2048</p>
+			<div class="bar">
+				<div class="new_game">
+					<a href="javascript:init();">New Game</a>
+				</div>
+				<div class="score">
+					<p>SCORE:</p>
+					<span id="score"></span>
+				</div>
+				<div class="bestScore" title="Please believe this is not your limit.">
+					<p>BEST:</p>
+					<span id="bestScore"></span>
+				</div>
+			</div>
+			<div class="description">
+				<p>Please use ←↑→↓ to control this game.</p>
+			</div>
 		</div>
-		<div class="bestScore" title="Please believe this is not your limit.">
-		    <p>BEST:</p>
-			<span id="bestScore"></span>
+		<div class="content" id="content">
+			<div class="grid_cell" id="grid_cell_0_0"></div>
+			<div class="grid_cell" id="grid_cell_0_1"></div>
+			<div class="grid_cell" id="grid_cell_0_2"></div>
+			<div class="grid_cell" id="grid_cell_0_3"></div>
+			<div class="grid_cell" id="grid_cell_1_0"></div>
+			<div class="grid_cell" id="grid_cell_1_1"></div>
+			<div class="grid_cell" id="grid_cell_1_2"></div>
+			<div class="grid_cell" id="grid_cell_1_3"></div>
+			<div class="grid_cell" id="grid_cell_2_0"></div>
+			<div class="grid_cell" id="grid_cell_2_1"></div>
+			<div class="grid_cell" id="grid_cell_2_2"></div>
+			<div class="grid_cell" id="grid_cell_2_3"></div>
+			<div class="grid_cell" id="grid_cell_3_0"></div>
+			<div class="grid_cell" id="grid_cell_3_1"></div>
+			<div class="grid_cell" id="grid_cell_3_2"></div>
+			<div class="grid_cell" id="grid_cell_3_3"></div>
+			<div id= "over" class="over">
+				<p>Game Over</p>
+			</div>
 		</div>
-		<div class="new_game">
-		    <a href="javascript:init();">New Game</a>
-		</div>
-        <div class="description">
-		    <p>Please use ←↑→↓ to control this game.</p>
-			<p>--DangoSky</p>
-		</div>
-	    <div class="grid_cell" id="grid_cell_0_0"></div>
-	    <div class="grid_cell" id="grid_cell_0_1"></div>
-	    <div class="grid_cell" id="grid_cell_0_2"></div>
-	    <div class="grid_cell" id="grid_cell_0_3"></div>
-	    <div class="grid_cell" id="grid_cell_1_0"></div>
-	    <div class="grid_cell" id="grid_cell_1_1"></div>
-	    <div class="grid_cell" id="grid_cell_1_2"></div>
-	    <div class="grid_cell" id="grid_cell_1_3"></div>
-	    <div class="grid_cell" id="grid_cell_2_0"></div>
-	    <div class="grid_cell" id="grid_cell_2_1"></div>
-	    <div class="grid_cell" id="grid_cell_2_2"></div>
-	    <div class="grid_cell" id="grid_cell_2_3"></div>
-	    <div class="grid_cell" id="grid_cell_3_0"></div>
-	    <div class="grid_cell" id="grid_cell_3_1"></div>
-	    <div class="grid_cell" id="grid_cell_3_2"></div>
-	    <div class="grid_cell" id="grid_cell_3_3"></div>
-		<div id= "over" class="over">
-	        <p>Game Over</p>
-			<p>(QWQ)</p>
-		    <p>Play Again?</p>
-	    </div>
 	</div>
 </body>
 </html>

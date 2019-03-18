@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+  margin: 0;
 	padding: 0;
 	list-style: none;
 	border: none;
@@ -10,69 +10,70 @@ body{
 a:link{
 	text-decoration: none;
 }
+.header {
+	width: 100%;
+	position: relative;
+}
+.container {
+	width: 475px;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+}
 .headline{
-	font-size: 60px;
 	font-weight: bold;
 	color: rgb(119, 110, 101);
-	position: absolute;
-	top: -143px;
-	left: 25px;
+	font-size: 3rem;
+	padding: 5px 0;
+	text-align: center;
 }
 .description{
-	font-size: 18px;
-	color: rgb(119, 110, 101);
-	position: absolute;
-	top: -60px;
+	font-size: 1.2rem;
+	text-align: center;
+	color: rgb(121, 113, 106);
+	position: relative;
+	padding: 10px 0;
 }
-.description p:nth-child(2){
-	float: right;
+.bar {
+	display: flex;
+	justify-content: space-between;
+}
+.new_game{
+	background-color: #8f7a66;
+	width: 32%;
+	font-size: 1.2rem;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 5px;
+	position: relative;	
+}
+.new_game a {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
 }
 .score, .bestScore{
+	width: 32%;
+	height: 50px;
 	background-color: rgb(187, 173, 160);
-	position: absolute;
-	width: 100px;
-	height: 60px;
 	text-align: center;
 	box-sizing: border-box;
 	padding: 5px;
 	color: white;
 	border-radius: 5px;
 }
-.score{
-	left: 375px;
-	top: -125px;
-}
-.bestScore{
-	left: 260px;
-	top: -125px;
-}
 .score p, .bestScore p{
-	font-size: 12px;
+	font-size: 1rem;
 }
 .score span, .bestScore span{
-	font-size: 30px;
+	font-size: 1rem;
 }
-.new_game{
-	background-color: #8f7a66;
-	width: 115px;
-	height: 40px;
-	position: absolute;
-	top: -50px;
-	left: 360px;
-	line-height: 40px;
-	font-size: 20px;
-	color: white;
-	text-align: center;
-	cursor: pointer;
-	border-radius: 5px;
-}
-.new_game a{
-	color: white;
-}
-.container{
-	width: 475px;
+.content{
+	width: 100%;
 	height: 475px;
-	margin: 150px auto;
 	border-radius: 15px;
 	background-color: #bbada0;
 	position: relative;
@@ -80,37 +81,59 @@ a:link{
 	padding: 15px;
 }
 .grid_cell{
-	width: 100px;
-	height: 100px;
+	width: 21.25%;
+	height: 21.25%;
 	background-color: #ccc0b3;
 	text-align: center;
 	line-height: 100px;
-	font-size: 50px;
+	font-size: 2.4rem;
 	border-radius: 10px;
 	float: left;
 	position: absolute;	
 }
 .number_cell{
-	width: 100px;
-	height: 100px;
+	width: 21.25%;
+	height: 21.25%;
 	text-align: center;
 	border-radius: 10px;
 	line-height: 100px;
 	font-weight: bold;
 	font-family: KaiTi, SimSun;
-	font-size: 50px;
+	font-size: 2.4rem;
 	position: absolute;
 }
-.over{
-	width: 475px;
-	height: 475px;
-	text-align: center;
-	font-size: 50px;
+.over {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+	font-size: 3rem;
 	font-family: KaiTi, SimSun;
 	color: #776e65;
 	font-weight: bold;
-	position: absolute;
-	top: 30%;
 	opacity: 0;
+	display: none;
 	z-index: 99;
+
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		width: 90vmin;
+	}
+	.content {
+		height: 90vmin;
+	}
+	html {
+		font-size: 14px; 
+	}
+	.grid_cell, .number_cell {
+		line-height: 19.116vmin;
+		/* line-height: calc(90vmin * 0.2124); */
+		font-weight: 500;
+	}
+	.headline {
+		font-weight: 545;
+	}
 }
