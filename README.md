@@ -8,4 +8,8 @@ Use left, up, right, down to control the movement of the square. When two square
 This 2048 can only be played on PC, but not on mobile.
 
 ## Expected improvement
-Rebuild the project in order to support for mobile gaming.
+- [X] Rebuild the project in order to support for mobile gaming.
+
+Please use your mobile phone to scan this QR code for the game.
+
+![](http://dangosky.com/2048/2048.png)
