@@ -122,7 +122,6 @@ function gameOver(){
 
 //向左移动
 function moveLeft(){
-	if(!canMoveLeft())  return false;
 	initAdd();                                     //将判断是否要合并的add数组重置为0
 	for(var i=0; i<4; i++){
 		for(var j=1; j<4; j++){
@@ -158,7 +157,6 @@ function moveLeft(){
 
 //向右移动
 function moveRight(){
-	if(!canMoveRight())  return false;
 	initAdd();
 	for(var i=0; i<4; i++){
 		for(var j=2; j>=0; j--){
@@ -194,7 +192,6 @@ function moveRight(){
 
 //向上移动
 function moveUp(){
-	if(!canMoveUp())  return false;
 	initAdd();
 	for(var j=0; j<4; j++){
 		for(var i=1; i<4; i++){
@@ -230,7 +227,6 @@ function moveUp(){
 
 //向下移动
 function moveDown(){
-	if(!canMoveDown())  return false;
 	initAdd();
 	for(var j=0; j<4; j++){
 		for(var i=2; i>=0; i--){

@@ -38,6 +38,7 @@ function init() {
 	generateNumber();
 	generateNumber();
 	// 绑定监听事件
+	var content = document.getElementById('content');
 	content.addEventListener('touchstart', touchStart);
 	content.addEventListener('touchmove', touchMove, {passive: false});
 	content.addEventListener('touchend', touchEnd);
@@ -117,18 +118,22 @@ function move(key) {
 	switch (key) {
 		case 37:
 		case 4:
+		  if(!canMoveLeft())  return false;
 			moveLeft();
 			break;
 		case 39:
 		case 2:
+			if(!canMoveRight())  return false;
 			moveRight();
 			break;
 		case 38:
 		case 1:
+			if(!canMoveUp())  return false;
 			moveUp();
 			break;
 		case 40:
 		case 3:
+			if(!canMoveDown())  return false;
 			moveDown();
 			break;
 		// 防止按下其他键后依旧生成新数字 

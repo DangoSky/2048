@@ -1,44 +1,51 @@
-*{
-  margin: 0;
+* {
+	margin: 0;
 	padding: 0;
 	list-style: none;
 	border: none;
 }
-body{
+
+body {
 	overflow: hidden;
 }
-a:link{
+
+a:link {
 	text-decoration: none;
 }
+
 .header {
 	width: 100%;
 	position: relative;
 }
+
 .container {
 	width: 475px;
 	height: auto;
 	margin: 0 auto;
 	position: relative;
 }
-.headline{
+
+.headline {
 	font-weight: bold;
 	color: rgb(119, 110, 101);
 	font-size: 3rem;
 	padding: 5px 0;
 	text-align: center;
 }
-.description{
+
+.description {
 	font-size: 1.2rem;
 	text-align: center;
 	color: rgb(121, 113, 106);
 	position: relative;
 	padding: 10px 0;
 }
+
 .bar {
 	display: flex;
 	justify-content: space-between;
 }
-.new_game{
+.new_game {
 	background-color: #8f7a66;
 	width: 32%;
 	font-size: 1.2rem;
@@ -47,7 +54,7 @@ a:link{
 	cursor: pointer;
 	border-radius: 5px;
 	vertical-align: middle;
-	position: relative;	
+	position: relative;
 }
 .new_game span {
 	position: absolute;
@@ -56,7 +63,9 @@ a:link{
 	transform: translate(-50%, -50%);
 	color: white;
 }
-.score, .bestScore{
+
+.score,
+.bestScore {
 	width: 32%;
 	height: 50px;
 	background-color: rgb(187, 173, 160);
@@ -66,26 +75,33 @@ a:link{
 	color: white;
 	border-radius: 5px;
 }
-.score p, .bestScore p{
+
+.score p,
+.bestScore p {
 	font-size: 1rem;
 }
-.score span, .bestScore span{
+
+.score span,
+.bestScore span {
 	font-size: 1rem;
 }
-.content{
+
+.content {
 	width: 100%;
 	height: 475px;
 	border-radius: 15px;
 	background-color: #bbada0;
 	position: relative;
-	box-sizing: border-box; 
+	box-sizing: border-box;
 	padding: 15px;
 }
+
 .body {
 	width: 100%;
 	height: 100%;
 }
-.grid_cell{
+
+.grid_cell {
 	width: 21.25%;
 	height: 21.25%;
 	background-color: #ccc0b3;
@@ -94,9 +110,10 @@ a:link{
 	font-size: 2.4rem;
 	border-radius: 10px;
 	float: left;
-	position: absolute;	
+	position: absolute;
 }
-.number_cell{
+
+.number_cell {
 	width: 21.25%;
 	height: 21.25%;
 	text-align: center;
@@ -107,6 +124,7 @@ a:link{
 	font-size: 2.4rem;
 	position: absolute;
 }
+
 .over {
 	position: absolute;
 	top: 50%;
@@ -122,21 +140,27 @@ a:link{
 	z-index: 99;
 
 }
+
 @media screen and (max-width: 600px) {
 	.container {
 		width: 90vmin;
 	}
+
 	.content {
 		height: 90vmin;
 	}
+
 	html {
-		font-size: 14px; 
+		font-size: 14px;
 	}
-	.grid_cell, .number_cell {
+
+	.grid_cell,
+	.number_cell {
 		line-height: 19.116vmin;
 		/* line-height: calc(90vmin * 0.2124); */
 		font-weight: 500;
 	}
+
 	.headline {
 		font-weight: 545;
 	}
