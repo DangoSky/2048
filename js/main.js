@@ -117,19 +117,35 @@ function move(key) {
 	switch (key) {
 		case 37:
 		case 4:
-			moveLeft();
+			if (canMoveLeft()) {
+				moveLeft();
+				generateNumberCell();
+				generateNumber();
+			}
 			break;
 		case 39:
 		case 2:
-			moveRight();
+			if (canMoveRight()) {
+				moveRight();
+				generateNumberCell();
+				generateNumber();
+			}
 			break;
 		case 38:
 		case 1:
-			moveUp();
+			if (canMoveUp()) {
+				moveUp();
+				generateNumberCell();
+				generateNumber();
+			}
 			break;
 		case 40:
 		case 3:
-			moveDown();
+			if (canMoveDown()) {
+				moveDown();
+				generateNumberCell();
+				generateNumber();
+			}
 			break;
 		// 防止按下其他键后依旧生成新数字 
 		default: 
@@ -138,8 +154,6 @@ function move(key) {
 	changeScore();
 	setTimeout(function () {
 		// 等移动动画过后再生成数字，否则若合并和生成数字是在同一行发生的会出现格子“后退”错觉
-		generateNumberCell();
-		generateNumber();
 		isGameOver();
 	}, 200);
 }
