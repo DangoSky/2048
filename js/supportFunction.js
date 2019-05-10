@@ -70,7 +70,7 @@ function getNumberCellColor(number){
 //数字颜色
 function getNumberColor(number){
 	if(number <=4)  return "#776e65";
-	else  return "white";
+	return "white";
 }
 
 //numberCell离顶部的距离
@@ -96,7 +96,7 @@ function noSpace(){
 //判断是否还有可以移动的盒子
 function noMove(){
 	if(canMoveLeft() || canMoveRight() || canMoveUp() || canMoveDown()) return false;
-	else    return true;
+	return true;
 }
 
 //判断是否游戏结束
